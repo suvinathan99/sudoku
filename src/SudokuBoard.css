@@ -1,0 +1,36 @@
+/* SudokuBoard.css */
+.SudokuBoard {
+  display: grid;
+  grid-template-columns: repeat(9, 40px);
+  grid-template-rows: repeat(9, 40px);
+  gap: 1px;
+}
+
+.SudokuRow {
+  display: flex;
+}
+
+.SudokuCell {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: 1px solid #333; /* Add outline style to all cells */
+}
+
+.SudokuCell input {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 1rem;
+  border: none;
+  outline: none; /* Remove input outline */
+}
+
+/* Adjust the outline styles for the focused input */
+.SudokuCell input:focus {
+  outline: 2px solid #007bff; /* Change the outline to a solid blue line when focused */
+  border: 1px solid transparent; /* Hide the cell border when focused */
+}
